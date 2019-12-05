@@ -7,6 +7,7 @@
   "scripts": {
     "serve": "live-server public/",
     "build:dev": "webpack",
+    "deploy": "aws s3 sync build:prod/ s3://hiretoride.com",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
     "test": "jest",
